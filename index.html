@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHive - Social Media Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-page">
+        <header>
+            <h1>ConnectHive</h1>
+        </header>
+        <main>
+            <section id="auth">
+                <h2>Sign In / Log In</h2>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="signIn()">Sign In</button>
+                <button onclick="logIn()">Log In</button>
+                <p id="auth-message"></p>
+            </section>
+        </main>
+    </div>
+
+    <div id="main-page" style="display:none;">
+        <header>
+            <h1>ConnectHive</h1>
+            <nav>
+                <ul>
+                    <li><a href="#feed">Feed</a></li>
+                    <li><a href="#circles">Circles</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><button onclick="logout()">Logout</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="feed">
+                <h2>Core Feed</h2>
+                <div id="post-form">
+                    <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+                    <button onclick="createPost()">Post</button>
+                </div>
+                <div id="posts"></div>
+            </section>
+
+            <section id="circles">
+                <h2>Communities & Circles</h2>
+                <div id="circle-form">
+                    <input type="text" id="circle-name" placeholder="Circle Name">
+                    <button onclick="createCircle()">Create Circle</button>
+                </div>
+                <div id="circle-list"></div>
+            </section>
+
+            <section id="profile">
+                <h2>Your Profile</h2>
+                <div id="profile-info">
+                    <p><strong>HiveScore:</strong> <span id="linkscore">0</span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 ConnectHive. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
